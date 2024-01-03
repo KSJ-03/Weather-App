@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.weather.forecast.clearsky"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.weather.forecast.clearsky"
         minSdk = 25
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -32,17 +32,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "1.8"
     }
     buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.0"
+        viewBinding = true
     }
     packaging {
         resources {
@@ -57,9 +54,9 @@ kapt {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.activity:activity-compose:1.8.2")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -75,9 +72,9 @@ dependencies {
 
 
     //hilt
-    implementation("com.google.dagger:hilt-android:2.44.2")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
-    val lifecycle_version: String = "2.6.1"
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    val lifecycle_version: String = "2.6.2"
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     // ViewModel utilities for Compose
@@ -90,9 +87,9 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
     //Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
     // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 }

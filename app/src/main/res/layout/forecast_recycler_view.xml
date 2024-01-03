@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/forecast_card_rv"
+        android:layout_width="300dp"
+        android:layout_height="260dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/card_data_shape"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Today" />
+
+        <TextView
+            android:id="@+id/max_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calender"
+            tools:text="Max Temp : 27 C" />
+
+        <TextView
+            android:id="@+id/min_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/max_temp"
+            tools:text="Min Temp : 16 C" />
+
+        <TextView
+            android:id="@+id/avg_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/min_temp"
+            tools:text="Avg Humidity : 85%" />
+
+        <TextView
+            android:id="@+id/forecast_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avg_humidity"
+            tools:text="Partially Cloudy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

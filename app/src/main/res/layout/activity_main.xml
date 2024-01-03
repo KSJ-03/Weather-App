@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/search_bar"
+        layout="@layout/searchbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/current_data"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_data_shape"
+        android:orientation="vertical"
+        android:padding="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/last_updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/city"
+            tools:text="Last updated:\n2023-12-23 15:00" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="London" />
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/city"
+            tools:text="United Kingdom" />
+
+        <TextView
+            android:id="@+id/temp_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/country"
+            tools:text="Temp : 27.0°C" />
+
+        <TextView
+            android:id="@+id/wind_kph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temp_c"
+            tools:text="Wind(kph) : 38.1" />
+
+        <TextView
+            android:id="@+id/current_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wind_kph"
+            tools:text="Partly cloudy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_forecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_data"
+        android:orientation="horizontal">
+
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
